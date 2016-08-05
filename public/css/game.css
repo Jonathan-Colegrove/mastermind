@@ -2,4 +2,43 @@
   background: url("/images/mastermind.jpg") no-repeat;
   background-size: 100% 100%;
   margin: auto;
+  height: 50vh;
+  width: 100vw;
+}
+
+.center, .action {
+  display: flex;
+  justify-content: space-between;
+}
+
+.start_container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.guesses form {
+  display: flex;
+  flex-direction: column;
+}
+
+.info table, th, td {
+  border-collapse: collapse;
+  border: 1px solid black;
+  padding-right: 6px;
+  padding-left: 6px;
+  text-align: center;
+}
+
+.lose {
+  background: url("/images/lose.jpg") no-repeat;
+  background-size: contain;
+  /*size: 100vh;*/
+  /*size: 100vw;*/
+}
+
+.win {
+  background: url("/images/win.jpg") no-repeat;
+  background-size: contain;
+  /*size: 100vh;*/
+  /*size: 100vw;*/
 }

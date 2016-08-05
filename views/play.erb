@@ -3,59 +3,93 @@
   <head>
     <meta charset="utf-8">
     <title>M a s t e r _ _ M i n d</title>
+    <link rel="stylesheet" href="/css/game.css">
   </head>
   <body>
     <h1>Let's Play!</h1>
 
-  <p>CHEAT MODE: Computer's Guess = <%= @secret %></p>
+    <p>CHEAT MODE: Computer's Guess = <%= $play.secret %></p>
 
+    <p>You've guessed <%= $play.guess_count %> times</p>
 
-    <p>You've guessed <%= @guess_count %> times</p>
+    <div class="center">
 
-    <div class="guesses">
-      <form action="/guess" method="post">
+      <div class="guesses">
+        <form action="/guess" method="post">
 
-        <select name="color1">
-          <option value="Blue">Blue</option>
-          <option value="Orange">Orange</option>
-          <option value="Green">Green</option>
-          <option value="Purple">Purple</option>
-          <option value="Yellow">Yellow</option>
-          <option value="Pink">Pink</option>
-        </select>
+          <select name="color1">
+            <option value="Blue">Blue</option>
+            <option value="Orange">Orange</option>
+            <option value="Green">Green</option>
+            <option value="Purple">Purple</option>
+            <option value="Yellow">Yellow</option>
+            <option value="Pink">Pink</option>
+          </select>
 
-        <select name="color2">
-          <option value="Blue">Blue</option>
-          <option value="Orange">Orange</option>
-          <option value="Green">Green</option>
-          <option value="Purple">Purple</option>
-          <option value="Yellow">Yellow</option>
-          <option value="Pink">Pink</option>
-        </select>
+          <select name="color2">
+            <option value="Blue">Blue</option>
+            <option value="Orange">Orange</option>
+            <option value="Green">Green</option>
+            <option value="Purple">Purple</option>
+            <option value="Yellow">Yellow</option>
+            <option value="Pink">Pink</option>
+          </select>
 
-        <select name="color3">
-          <option value="Blue">Blue</option>
-          <option value="Orange">Orange</option>
-          <option value="Green">Green</option>
-          <option value="Purple">Purple</option>
-          <option value="Yellow">Yellow</option>
-          <option value="Pink">Pink</option>
-        </select>
+          <select name="color3">
+            <option value="Blue">Blue</option>
+            <option value="Orange">Orange</option>
+            <option value="Green">Green</option>
+            <option value="Purple">Purple</option>
+            <option value="Yellow">Yellow</option>
+            <option value="Pink">Pink</option>
+          </select>
 
-        <select name="color4">
-          <option value="Blue">Blue</option>
-          <option value="Orange">Orange</option>
-          <option value="Green">Green</option>
-          <option value="Purple">Purple</option>
-          <option value="Yellow">Yellow</option>
-          <option value="Pink">Pink</option>
-        </select>
+          <select name="color4">
+            <option value="Blue">Blue</option>
+            <option value="Orange">Orange</option>
+            <option value="Green">Green</option>
+            <option value="Purple">Purple</option>
+            <option value="Yellow">Yellow</option>
+            <option value="Pink">Pink</option>
+          </select>
 
-        <input type="submit" value="Guess!">
-      </form>
-    </div>
+          <input type="submit" value="Guess!">
+        </form>
+      </div>
+
+      <div class="info">
+        <table>
+          <thead>
+            <tr>
+              <th>Guess #</th>
+              <th>Your Guess</th>
+              <th>How Close?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% $play.guess_history.each.with_index do |guess, i| %>
+              <tr>
+                <td><%= i + 1 %></td>
+                <td>
+                  <% guess.each do |color| %>
+                    <!-- <span class="guess-<%= color %>"><%= color %></span> -->
+                    <img src="/images/guess-<%= color %>.png">
+                  <% end %>
+                </td>
+                <td>
+                  <% $play.result_history[i].each do |result| %>
+                    <img src="/images/result-<%= result %>.png">
+                  <% end %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+
     <button>
       <a href="/give_up">Give Up</a>
     </button>
+
   </body>
 </html>

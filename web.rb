@@ -9,12 +9,6 @@ get "/" do
 end
 
 get "/play" do
-  @guess_count = $play.guess_count
-
-# DELETE BELOW
-  @secret = $play.secret
-# DELETE ABOVE
-
   erb :play
 end
 

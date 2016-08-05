@@ -6,31 +6,25 @@
     <link rel="stylesheet" href="/css/game.css">
   </head>
   <body>
-    <h1>How to Play</h1>
-    <button>
-      <a href="/play">Let's Get Started!</a>
-    </button>
+    <div class="game"></div>
+    <div class="start_container">
 
-    <div class="game" style="height: 550px; width: 500px;"></div>
-      <h2>Mastermind - Rules of the game.</h2>
-    <ul>
-      <li>Computer picks a row of 4 colors</li>
-      <li>You guess the exact positions of the colors</li>
-      <li>duplicate colors allowed in the secret</li>
-    </ul>
-    <p>Colors:  Blue Orange Green Purple Yellow Pink</p>
-    <p>
-    - GUESSES
-    correct color & position = red
-    correct color incorrect position = white
-    neither = grey
+      <div class="rules">
+        <h1>Rules</h1>
+        <ul>
+          <li>Computer picks a row of 4 colors</li>
+          <li>You guess the exact positions of the colors</li>
+          <li>duplicate colors allowed in the secret</li>
+        </ul>
+        <p>Colors:  Blue Orange Green Purple Yellow Pink</p>
+        <p>WIN  = guess all the colors in the correct position</p>
+        <p>LOSE = guess wrong 10x in a row</p>
+      </div>
 
-    - WIN =  guess all the colors in right position
-    - LOSE = if don't guess correctly in 10 tries
+      <button>
+        <a href="/play"><img src="/images/start.png" alt="start" /></a>
+      </button>
 
-    - Need to change a color choice?  Click a new color
-    - CLICK "Check"
-    </p>
-
+    </div>
   </body>
 </html>
