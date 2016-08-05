@@ -15,20 +15,29 @@ get "/play" do
   @secret = $play.secret
 # DELETE ABOVE
 
-  if @guess_count > 10
-    redirect "/lose"
-  end
-
-  if $play.result_win?(@guess)
-    redirect "/win"
-  end
-
   erb :play
 end
 
 post "/guess" do
   @guess_color = params["color1"], params["color2"], params["color3"], params["color4"]
-  $play.guess(@guess_color)
+
+  result = $play.guess(@guess_color)
+
+  if $play.result_win?(result)
+    redirect "/win"
+    return
+  end
+
+  if $play.result_win?(@guess)
+    redirect "/win"
+    return
+  end
+
+  if $play.guess_count > 10
+    redirect "/lose"
+    return
+  end
+
   redirect "/play"
 end
 
