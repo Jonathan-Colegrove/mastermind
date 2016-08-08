@@ -5,10 +5,9 @@
     <title>M a s t e r _ _ M i n d</title>
     <link rel="stylesheet" href="/css/game.css">
   </head>
-  <body>
+  <body class="swirl">
     <h1>Let's Play!</h1>
-
-    <p>CHEAT MODE: Computer's Guess = <%= $play.secret %></p>
+    <!-- <p>CHEAT MODE: Computer's Guess = <%= $play.secret %></p> -->
 
     <p>You've guessed <%= $play.guess_count %> times</p>
 
@@ -72,7 +71,6 @@
                 <td><%= i + 1 %></td>
                 <td>
                   <% guess.each do |color| %>
-                    <!-- <span class="guess-<%= color %>"><%= color %></span> -->
                     <img src="/images/guess-<%= color %>.png">
                   <% end %>
                 </td>
@@ -87,9 +85,9 @@
         </table>
       </div>
 
-    <button>
-      <a href="/give_up">Give Up</a>
-    </button>
+    <div>
+      <a href="/give_up"><img src="/images/give_up2.png" alt="give up" /></a>
+    </div>
 
   </body>
 </html>

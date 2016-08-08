@@ -1,3 +1,15 @@
+ul {
+    list-style-image: url("/images/star.png");
+}
+
+.rules p span {
+  text-shadow:
+   -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+}
+
 .game {
   background: url("/images/mastermind.jpg") no-repeat;
   background-size: 100% 100%;
@@ -29,16 +41,31 @@
   text-align: center;
 }
 
+.swirl {
+  background: url("/images/swirl2.jpg") no-repeat;
+  background-size: 100%;
+}
+
+.dont_give_up {
+  background: url("/images/dont_give_up.jpg") no-repeat;
+  background-size: 100%;
+}
+
 .lose {
   background: url("/images/lose.jpg") no-repeat;
-  background-size: contain;
-  /*size: 100vh;*/
-  /*size: 100vw;*/
+  background-size: 100%;
+}
+
+h1 {
+  color: white;
+  text-shadow:
+   -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
 }
 
 .win {
   background: url("/images/win.jpg") no-repeat;
-  background-size: contain;
-  /*size: 100vh;*/
-  /*size: 100vw;*/
+  background-size: 100%;
 }
