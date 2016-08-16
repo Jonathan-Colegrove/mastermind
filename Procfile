@@ -1,1 +1,1 @@
-web: ruby mastermind.rb
+web: ruby web.rb
