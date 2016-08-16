@@ -1,6 +1,7 @@
 require "sinatra"
 require_relative "mastermind"
 require "sinatra/reloader" if development?
+set :bind, '0.0.0.0'
 
 $play = MasterMind.new
 
