@@ -19,4 +19,4 @@ I learned a lot about using `Ruby` code inside the browser; it was very exciting
 # To Play:
 type `ruby web.rb` into the terminal & navigate to [localhost:4567](localhost:4567).
 
-![MasterMind](https://github.com/Jonathan*Colegrove/mastermind/README.png)
+![MasterMind](https://github.com/Jonathan-Colegrove/mastermind/README.png)
