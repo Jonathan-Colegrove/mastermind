@@ -16,7 +16,6 @@ We used `sinatra`, advanced our `HTML` & `CSS` skills, as well as used `erb` to 
 
 I learned a lot about using `Ruby` code inside the browser; it was very exciting to see what it could do!
 
-# To Play:
-type `ruby web.rb` into the terminal & navigate to [localhost:4567](localhost:4567).
+# Click [young-coast-90939.herokuapp.com](https://young-coast-90939.herokuapp.com/) to play.
 
 ![](https://raw.githubusercontent.com/Jonathan-Colegrove/mastermind/master/README.png)
